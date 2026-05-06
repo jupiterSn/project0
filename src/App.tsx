@@ -1,10 +1,15 @@
 import React from "react";
 import Login from './features/auth/login/login';
+import AuthLayout from './layouts/AuthLayout';
+
 
 
 
 const App: React.FC = () => {
   return (
+    <AuthLayout/>
+  );
+};
       <div className="min-h-screen bg-gray-100">
 
       {/* Main Content */}
@@ -12,7 +17,5 @@ const App: React.FC = () => {
         <Login />
       </main>
     </div>
-  );
-};
 
 export default App;
