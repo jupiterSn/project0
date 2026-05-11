@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import React, { useState, ReactNode } from 'react';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import SettingsIcon from '@mui/icons-material/Settings';
 import PeopleIcon from '@mui/icons-material/People';
@@ -11,7 +10,11 @@ import CloseIcon from '@mui/icons-material/Close';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
-const MainLayout: React.FC = () => {
+interface MainLayoutProps {
+  children?: ReactNode;
+}
+
+const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -133,7 +136,7 @@ const MainLayout: React.FC = () => {
         <main className="flex-1 overflow-auto">
           <div className="p-6">
             <div className="bg-white rounded-lg shadow-md p-8 min-h-full">
-              <Outlet />
+              {children}
             </div>
           </div>
         </main>

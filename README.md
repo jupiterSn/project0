@@ -14,4 +14,6 @@ i used an ai tool to help me through the steps and you will find the link attach
          modified my index.css so now Tailwind’s utilities are now available everywhere in my app...
          deleted navbar and silder....
          deleted all css files and kept just the index file that already have imported tailwind and modified files accordingly
-        
+        added "layouts" component that contains auth layout and main layout using material icons and tailwind.
+        modified login.tsx and app.tsx according to adding those files.
+       created my button component and linked it to app.tsx
